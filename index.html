@@ -4,78 +4,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arcade Rollers Federation (ARF)</title>
+  <title>ARF · Arcade Rollers Federation</title>
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet" />
   <style>
+    :root {
+      --bg: #fefefe;
+      --fg: #111;
+      --accent: #f04;
+      --gray: #ccc;
+      --font: monospace;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--fg);
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
     }
+
     header {
-      background: #111;
-      color: #fff;
-      padding: 1.5em 2em;
+      background: var(--fg);
+      color: var(--bg);
+      padding: 2rem;
       text-align: center;
+      border-bottom: 6px solid var(--accent);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5em;
+      color: var(--gray);
+    }
+
     main {
-      padding: 2em;
-      max-width: 800px;
+      padding: 2rem;
+      max-width: 960px;
       margin: auto;
     }
-    h1, h2, h3 {
-      color: #1e1e1e;
-    }
+
     section {
-      margin-bottom: 3em;
+      margin-bottom: 3rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.2rem;
+      margin-bottom: 1rem;
     }
-    ul li::before {
-      content: "🎯 ";
-    }
-    .ranking-table {
+
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1em;
+      margin-top: 1rem;
     }
-    .ranking-table th, .ranking-table td {
-      border: 1px solid #ccc;
-      padding: 0.6em;
+
+    th, td {
+      border: 1px solid var(--gray);
+      padding: 0.5rem;
       text-align: left;
     }
-    .ranking-table th {
-      background: #efefef;
+
+    th {
+      background: #f3f3f3;
     }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
-      padding: 2em;
-      font-size: 0.9em;
-      color: #666;
+      padding: 2rem;
+      font-size: 0.8rem;
+      border-top: 2px solid var(--accent);
+      color: var(--gray);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Arcade Rollers Federation (ARF)</h1>
-    <p>The Official Governing Body of Seven-Ring Rolling</p>
+    <h1>ARF · Arcade Rollers Federation</h1>
+    <p>Official Sanctioning Body of Seven-Ring Competitive Rolling</p>
   </header>
   <main>
     <section>
       <h2>About ARF</h2>
-      <p>The Arcade Rollers Federation (ARF) is the official sanctioning body for competitive Arcade Rolling across the western United States and Canada. ARF certifies lanes, ranks players, and operates the Rollermasters Tour under the international guidance of FILC.</p>
+      <p>The Arcade Rollers Federation (ARF) governs competitive Arcade Rolling in the western U.S. and Canada. ARF sanctions tournaments, maintains global rankings, and operates the Rollermasters Tour under the broader oversight of FILC.</p>
     </section>
 
     <section>
       <h2>ARF World Rankings</h2>
-      <p>Open division standings across all ARF-sanctioned events:</p>
-      <table class="ranking-table">
+      <table>
         <thead>
-          <tr><th>Rank</th><th>Player</th><th>Region</th></tr>
+          <tr><th>#</th><th>Player</th><th>Region</th></tr>
         </thead>
         <tbody>
           <tr><td>1</td><td>Luca “Loophole” Martinez</td><td>Bay Area, CA</td></tr>
@@ -88,14 +128,13 @@
     </section>
 
     <section>
-      <h2>Junior World Rankings</h2>
-      <p>Top U18 competitors in the junior tour:</p>
-      <table class="ranking-table">
+      <h2>Junior Rankings</h2>
+      <table>
         <thead>
-          <tr><th>Rank</th><th>Player</th><th>Region</th></tr>
+          <tr><th>#</th><th>Player</th><th>Region</th></tr>
         </thead>
         <tbody>
-          <tr><td>1</td><td>Max "Mini-Roll" DeLeon</td><td>Los Angeles, CA</td></tr>
+          <tr><td>1</td><td>Max “Mini-Roll” DeLeon</td><td>Los Angeles, CA</td></tr>
           <tr><td>2</td><td>Ellie Nguyen</td><td>Eugene, OR</td></tr>
           <tr><td>3</td><td>Samir Y.</td><td>Victoria, BC</td></tr>
         </tbody>
@@ -111,16 +150,16 @@
     </section>
 
     <section>
-      <h2>Watch rOLLTUBE</h2>
-      <p>Follow live match coverage and highlight reels from the Rollermasters Tour on rOLLTUBE:</p>
+      <h2>Watch on rOLLTUBE</h2>
+      <p>Live matches and archives from the Rollermasters Tour:</p>
       <ul>
-        <li><a href="#">Twitch Stream</a></li>
-        <li><a href="#">YouTube Archive</a></li>
+        <li><a href="#">Twitch</a></li>
+        <li><a href="#">YouTube</a></li>
       </ul>
     </section>
   </main>
   <footer>
-    &copy; 2025 Arcade Rollers Federation · All rights reserved
+    &copy; 2025 Arcade Rollers Federation · www.arcaderolling.org
   </footer>
 </body>
 </html>
