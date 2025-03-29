@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ligue MiniRoll de Montréal</title>
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fefaf5;
+      --fg: #1a1a1a;
+      --accent: #e63946;
+      --blue: #003049;
+      --gray: #ccc;
+      --font: monospace;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--blue);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: var(--blue);
+      border-left: 5px solid var(--accent);
+      padding-left: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .event, .note {
+      background-color: #f4f4f4;
+      border-left: 4px solid var(--accent);
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 2px solid var(--accent);
+      background-color: #f8f8f8;
+    }
+
+    .lang-toggle {
+      text-align: right;
+      margin-top: -1rem;
+      font-size: 0.8rem;
+    }
+
+    .lang-toggle a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ligue MiniRoll de Montréal</h1>
+    <p>La seule tournée de mini skeeball au monde (probablement)</p>
+  </header>
+  <main>
+    <div class="lang-toggle">
+      <a href="#">🇨🇦 English</a> (bientôt, ou pas)
+    </div>
+
+    <section>
+      <h2>À propos</h2>
+      <p>Bienvenue à la <strong>Ligue MiniRoll de Montréal</strong>, une ligue semi-sérieuse (mais 100% compétitive) qui se déroule exclusivement sur la mini allée de skeeball à <strong>North Star Machines à Piastres</strong>.</p>
+      <p>Ici, les roulettes sont petites, les enjeux sont moyens, et le plaisir est garanti.</p>
+    </section>
+
+    <section>
+      <h2>Calendrier</h2>
+      <div class="event">
+        📍 <strong>Prochaine Soirée MiniRoll</strong><br/>
+        Vendredi 12 avril 2025 — 19h00<br/>
+        Format : 5 manches, 3 roulettes par manche, le top 4 avance aux éliminatoires.
+      </div>
+
+      <div class="event">
+        🎉 <strong>Grande Finale Printemps</strong><br/>
+        Samedi 4 mai 2025 — 20h00<br/>
+        Prix ridicules, gloire locale, et peut-être une médaille en forme de boule.
+      </div>
+    </section>
+
+    <section>
+      <h2>Classement Actuel</h2>
+      <ul>
+        <li>🥇 Zoé “Micro-Roule” Bouchard</li>
+        <li>🥈 Étienne “Petit Strike” Lefebvre</li>
+        <li>🥉 Marie-Claude Béliveau</li>
+        <li>4e — Kevin des Lauzières</li>
+      </ul>
+    </section>
+
+    <section class="note">
+      📝 *Oui, on sait que ce n’est pas une vraie tournée mondiale. Mais si vous trouvez une autre ligue de mini skeeball, envoyez-la-nous et on fera un match intercontinental.
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 MiniRoll MTL · Jouer petit, rêver grand.
+  </footer>
+</body>
+</html>
