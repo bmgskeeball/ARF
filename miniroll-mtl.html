@@ -4,107 +4,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ligue MiniRoll de Montréal</title>
-  <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+  <title>MiniRoll MTL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #fefaf5;
-      --fg: #1a1a1a;
-      --accent: #e63946;
-      --blue: #003049;
-      --gray: #ccc;
-      --font: monospace;
-    }
-
     body {
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: var(--font);
       margin: 0;
+      font-family: 'Press Start 2P', monospace;
+      background-color: #111;
+      color: #faff00;
       padding: 0;
     }
 
     header {
-      background-color: var(--blue);
-      color: white;
-      padding: 2rem;
+      background: #ff006e;
+      color: #fff;
+      padding: 2rem 1rem;
       text-align: center;
-      border-bottom: 4px solid var(--accent);
+      border-bottom: 6px dashed #faff00;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      font-size: 0.8rem;
+      color: #ffeedd;
+      margin-top: 0.5rem;
     }
 
     main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h1 {
-      font-size: 2rem;
+      padding: 2rem 1rem;
+      max-width: 700px;
+      margin: auto;
     }
 
     h2 {
-      color: var(--blue);
-      border-left: 5px solid var(--accent);
-      padding-left: 0.5rem;
+      color: #00f0ff;
+      font-size: 1rem;
       margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-left: 6px solid #ff006e;
+      padding-left: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
     }
 
     .event, .note {
-      background-color: #f4f4f4;
-      border-left: 4px solid var(--accent);
+      background-color: #222;
+      border: 3px dotted #faff00;
       padding: 1rem;
       margin-top: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .lang-toggle {
+      text-align: right;
+      font-size: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .lang-toggle a {
+      color: #00f0ff;
+      text-decoration: none;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 2px solid var(--accent);
-      background-color: #f8f8f8;
+      font-size: 0.6rem;
+      background: #ff006e;
+      color: #fff;
+      border-top: 4px dashed #faff00;
     }
 
-    .lang-toggle {
-      text-align: right;
-      margin-top: -1rem;
-      font-size: 0.8rem;
-    }
-
-    .lang-toggle a {
-      color: var(--accent);
-      text-decoration: none;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Ligue MiniRoll de Montréal</h1>
-    <p>La seule tournée de mini skeeball au monde (probablement)</p>
+    <h1>MiniRoll MTL</h1>
+    <p>La seule tournée mondiale de mini skeeball (auto-déclarée)</p>
   </header>
   <main>
     <div class="lang-toggle">
-      <a href="#">🇨🇦 English</a> (bientôt, ou pas)
+      <a href="#">🇬🇧 English</a> (non dispo, désolé!)
     </div>
 
     <section>
       <h2>À propos</h2>
-      <p>Bienvenue à la <strong>Ligue MiniRoll de Montréal</strong>, une ligue semi-sérieuse (mais 100% compétitive) qui se déroule exclusivement sur la mini allée de skeeball à <strong>North Star Machines à Piastres</strong>.</p>
-      <p>Ici, les roulettes sont petites, les enjeux sont moyens, et le plaisir est garanti.</p>
+      <p>MiniRoll MTL est une ligue de mini skeeball qui se prend presque au sérieux. Basée au <strong>North Star Pinball</strong>, elle utilise une allée miniature pour des duels maxi-dramatiques.</p>
     </section>
 
     <section>
       <h2>Calendrier</h2>
       <div class="event">
-        📍 <strong>Prochaine Soirée MiniRoll</strong><br/>
-        Vendredi 12 avril 2025 — 19h00<br/>
-        Format : 5 manches, 3 roulettes par manche, le top 4 avance aux éliminatoires.
+        🎯 <strong>MiniTour #3</strong><br/>
+        Vendredi 12 avril 2025 – 19h00<br/>
+        Format : 5 manches, 3 lancers par manche, top 4 en éliminatoires.
       </div>
 
       <div class="event">
-        🎉 <strong>Grande Finale Printemps</strong><br/>
-        Samedi 4 mai 2025 — 20h00<br/>
-        Prix ridicules, gloire locale, et peut-être une médaille en forme de boule.
+        🏆 <strong>Grande Finale Printemps</strong><br/>
+        Samedi 4 mai 2025 – 20h00<br/>
+        Prix absurdes, honneur éternel (ou jusqu’à l'automne).
       </div>
     </section>
 
@@ -119,11 +134,11 @@
     </section>
 
     <section class="note">
-      📝 *Oui, on sait que ce n’est pas une vraie tournée mondiale. Mais si vous trouvez une autre ligue de mini skeeball, envoyez-la-nous et on fera un match intercontinental.
+      💡 *Tu connais une autre ligue de mini skeeball? Dis-le-nous. Sinon, on reste les seuls champions du monde.*
     </section>
   </main>
   <footer>
-    &copy; 2025 MiniRoll MTL · Jouer petit, rêver grand.
+    &copy; 2025 MiniRoll Montréal · Petit format, gros style.
   </footer>
 </body>
 </html>
