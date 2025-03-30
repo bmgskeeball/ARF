@@ -1,3 +1,4 @@
+// src/components/LeaderboardPreview.jsx
 export default function LeaderboardPreview() {
   const players = [
     { name: 'Ryo Sato 🇯🇵', points: 3420 },
@@ -7,10 +8,10 @@ export default function LeaderboardPreview() {
 
   return (
     <section>
-      <h2 className="text-2xl font-semibold mb-2">Current Standings</h2>
-      <ul className="bg-gray-100 p-4 rounded">
+      <h3 className="text-xl font-semibold mb-2">Top 3 – Legion of Merit</h3>
+      <ul className="bg-gray-50 p-4 rounded shadow">
         {players.map((p, i) => (
-          <li key={i} className="flex justify-between py-1">
+          <li key={i} className="flex justify-between py-1 border-b last:border-none">
             <span>{i + 1}. {p.name}</span>
             <span>{p.points} pts</span>
           </li>
