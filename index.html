@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Space Grotesk', sans-serif;
-      background-color: #111;
+      background-color: #0d0d0d;
       color: #f2f2f2;
       line-height: 1.6;
     }
@@ -36,7 +36,7 @@
     }
     main {
       padding: 2rem;
-      max-width: 960px;
+      max-width: 1140px;
       margin: 0 auto;
     }
     h2 {
@@ -54,17 +54,49 @@
       color: #666;
       border-top: 1px solid #333;
     }
-    .leaderboard ul, .schedule ul {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #1a1a1a;
+      border-left: 5px solid #00ffab;
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .leaderboard ul, .schedule ul, .news ul, .match-results ul, .rankings ul {
       list-style: none;
       padding: 0;
     }
-    .leaderboard li, .schedule li {
+    .leaderboard li, .schedule li, .news li, .match-results li, .rankings li {
       padding: 0.75rem 1rem;
       background: #1a1a1a;
       margin-bottom: 0.5rem;
-      border-left: 5px solid #00ffab;
       display: flex;
       justify-content: space-between;
+      border-left: 4px solid #00ffab;
+    }
+    .button-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .button {
+      background: #00ffab;
+      color: #111;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+    .button:hover {
+      background: #00e09b;
     }
   </style>
 </head>
@@ -73,6 +105,9 @@
     <h1>FILC World Tour</h1>
     <nav>
       <a href="#leaderboard">Leaderboard</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#results">Results</a>
+      <a href="#news">News</a>
       <a href="#schedule">Schedule</a>
       <a href="#about">About</a>
     </nav>
@@ -85,11 +120,50 @@
 
     <section id="leaderboard" class="leaderboard">
       <h2>Legion of Merit – Top Players</h2>
+      <div class="button-group">
+        <button class="button">Sort by Points</button>
+        <button class="button">Show All Players</button>
+      </div>
       <ul>
         <li><span>1. Ryo Sato 🇯🇵</span><span>3420 pts</span></li>
         <li><span>2. Clara Vance 🇬🇧</span><span>3060 pts</span></li>
         <li><span>3. Luis Orellana 🇨🇱</span><span>2790 pts</span></li>
       </ul>
+    </section>
+
+    <section id="rankings" class="rankings">
+      <h2>Statistical Rankings</h2>
+      <ul>
+        <li><span>Highest Frame Avg</span><span>Ryo Sato – 482</span></li>
+        <li><span>Cleanest Play Rate</span><span>Clara Vance – 94.1%</span></li>
+        <li><span>Strike Conversions</span><span>Luis Orellana – 12</span></li>
+      </ul>
+    </section>
+
+    <section id="results" class="match-results">
+      <h2>Latest Match Results</h2>
+      <ul>
+        <li><span>Pacific Roll Cup – Round of 16</span><span>R. Sato def. J. Krishnan 4690–4640</span></li>
+        <li><span>Cascadia Invitational – Semis</span><span>C. Vance def. L. Orellana 4780–4710</span></li>
+      </ul>
+    </section>
+
+    <section id="news" class="news">
+      <h2>Tour News</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Rule Change Announced</h3>
+          <p>Frame drop rules revised for Majors. Players now drop 2 worst instead of 1 in finals.</p>
+        </div>
+        <div class="card">
+          <h3>New Venue: Europa Bowl</h3>
+          <p>The 2025 Europa Bowl will be hosted in Valencia, Spain under a brand-new LED lane dome.</p>
+        </div>
+        <div class="card">
+          <h3>Player Spotlight</h3>
+          <p>Meet Mexico’s Rollmaster Xavi Lara, rising quickly with a tactical inside-arc game.</p>
+        </div>
+      </div>
     </section>
 
     <section id="schedule" class="schedule">
