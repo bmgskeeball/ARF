@@ -1,3 +1,268 @@
 <!DOCTYPE html>
-<!-- Entire HTML content from canvas (already provided by user) -->
-<!-- Snipped for brevity; assume full HTML was inserted here -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FILC World Tour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00f7ff;
+      --accent: #ff00b7;
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --text: #f4f4f4;
+      --muted: #777;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--primary);
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    nav a {
+      color: var(--text);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: var(--accent);
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #000;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #222;
+      text-align: left;
+    }
+    .leaderboard-table th {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+    .leaderboard-table td {
+      color: var(--text);
+    }
+    .button-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .button {
+      background: var(--primary);
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+    .button:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border-left: 5px solid var(--primary);
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid #333;
+    }
+    @media (max-width: 640px) {
+      .hero h2 {
+        font-size: 1.75rem;
+      }
+      nav a {
+        font-size: 0.8rem;
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FILC World Tour</h1>
+    <nav>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#results">Results</a>
+      <a href="#news">News</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to the FILC World Tour</h2>
+    <p>The premier international circuit of competitive Arcade Rolling. Rankings. Venues. Records. Stories. All here.</p>
+  </section>
+
+  <main>
+    <section id="leaderboard">
+      <h2>Legion of Merit – Leaderboard</h2>
+      <div class="button-group">
+        <button class="button">Sort by Points</button>
+        <button class="button">Sort by Wins</button>
+        <button class="button">Show All</button>
+      </div>
+      <table class="leaderboard-table">
+        <thead>
+          <tr><th>#</th><th>Player</th><th>Country</th><th>Points</th><th>Tour Wins</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Ryo Sato</td><td>🇯🇵</td><td>3420</td><td>3</td></tr>
+          <tr><td>2</td><td>Clara Vance</td><td>🇬🇧</td><td>3060</td><td>2</td></tr>
+          <tr><td>3</td><td>Luis Orellana</td><td>🇨🇱</td><td>2790</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="rankings">
+      <h2>Statistical Rankings</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Highest Frame Avg</h3>
+          <p>Ryo Sato – 482</p>
+        </div>
+        <div class="card">
+          <h3>Cleanest Play Rate</h3>
+          <p>Clara Vance – 94.1%</p>
+        </div>
+        <div class="card">
+          <h3>Strike Conversions</h3>
+          <p>Luis Orellana – 12</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <h2>Latest Match Results</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Pacific Roll Cup – Round of 16</h3>
+          <p>R. Sato def. J. Krishnan 4690–4640</p>
+        </div>
+        <div class="card">
+          <h3>Cascadia Invitational – Semis</h3>
+          <p>C. Vance def. L. Orellana 4780–4710</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>Tour News</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Rule Change Announced</h3>
+          <p>Frame drop rules revised for Majors. Players now drop 2 worst instead of 1 in finals.</p>
+        </div>
+        <div class="card">
+          <h3>New Venue: Europa Bowl</h3>
+          <p>The 2025 Europa Bowl will be hosted in Valencia, Spain under a brand-new LED lane dome.</p>
+        </div>
+        <div class="card">
+          <h3>Player Spotlight</h3>
+          <p>Meet Mexico’s Rollmaster Xavi Lara, rising quickly with a tactical inside-arc game.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <h2>Upcoming Events</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Pacific Roll Cup</h3>
+          <p>May 12 – Osaka 🇯🇵</p>
+        </div>
+        <div class="card">
+          <h3>Simpson Classic</h3>
+          <p>June 3 – London 🇬🇧</p>
+        </div>
+        <div class="card">
+          <h3>Cascadia Invitational</h3>
+          <p>July 6 – Portland 🇺🇸</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About FILC</h2>
+      <p>The Fédération Internationale de Lancer Ciblé (FILC) governs the global sport of Seven-Ring Bowling, also known as Arcade Rolling. Founded in 2024, FILC oversees international rankings, standardizes play formats, and runs the elite World Tour circuit.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fédération Internationale de Lancer Ciblé. All rights reserved.
+  </footer>
+</body>
+</html>
